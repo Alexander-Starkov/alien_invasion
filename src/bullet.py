@@ -1,6 +1,5 @@
-from typing import Any
 import pygame
-from pygame.sprite import _Group, Sprite
+from pygame.sprite import Sprite
 
 
 class Bullet(Sprite):
