@@ -16,24 +16,30 @@ class AlienInvasion():
         pygame.display.set_caption("Alien Invasion")
         
         self.ship = Ship(self)
-
+        
     def run_game(self):
         """Запуск основного цикла игры."""
         while True:
-        # Отслеживание событий клавиатуры и мыши.
+            self._check_events()
+            self._update_screen()
+            
+    def _check_events(self):
+        while True:
+        #* Отслеживание событий клавиатуры и мыши.
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    sys.exit()
+                    sys.exit()        
             
-            # При каждом проходе цикла перерисовывается экран.
-            self.screen.fill(self.settings.bg_color)
-            self.ship.blitme()
-            
-            # Отображение последнего прорисованного экрана.
-            pygame.display.flip()
+    def _update_screen(self):
+        """Обновляет изображения на экране и отображает новый экран."""
+        #* При каждом проходе цикла перерисовывается экран.
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
+        #* Отображение последнего прорисованного экрана.
+        pygame.display.flip()
             
             
 if __name__ == '__main__':
-    # Создание экземпляра и запуск игры.
+    #* Создание экземпляра и запуск игры.
     ai = AlienInvasion()
     ai.run_game()
