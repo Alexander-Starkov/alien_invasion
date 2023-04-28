@@ -25,7 +25,7 @@ class AlienInvasion():
             self._update_screen()
             
     def _check_events(self):
-    #* Отслеживание событий клавиатуры и мыши.
+        """Отслеживание событий клавиатуры и мыши"""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
