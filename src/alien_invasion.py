@@ -21,6 +21,9 @@ class AlienInvasion():
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         
+        #* Загрузка изображения фона
+        self.bg_image = pygame.image.load(self.settings.bg_image_path)
+        
     def run_game(self):
         """Запуск основного цикла игры."""
         while True:
@@ -76,7 +79,8 @@ class AlienInvasion():
     def _update_screen(self):
         """Обновляет изображения на экране и отображает новый экран."""
         #* При каждом проходе цикла перерисовывается экран.
-        self.screen.fill(self.settings.bg_color)
+        # self.screen.fill(self.settings.bg_color)
+        self.screen.blit(self.bg_image, (0, 0))
         self.ship.blitme()
         
         for bullet in self.bullets.sprites():
