@@ -7,7 +7,7 @@ class Settings():
         #* Цвет фона
         self.bg_color = (66, 170, 255)
         #* Фон
-        self.bg_image_path = "images/bcgrnd.bmp"
+        self.bg_image_path = "images/background.bmp"
         #* Настройки корабля
         self.ship_speed = 3.5
         

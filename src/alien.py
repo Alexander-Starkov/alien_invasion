@@ -9,7 +9,7 @@ class Alien(Sprite):
         self.screen = ai_game.screen
         
         #* Загрузка изображения пришельца и назначения стартовой позиции через атрибут rect
-        self.image = pygame.image.load('images/frog.bmp')
+        self.image = pygame.image.load('images/alien_ship.bmp')
         self.rect = self.image.get_rect()
         
         #* Появление пришельцев в верхнем левом углу
